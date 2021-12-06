@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Reservation</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <style>
+  .carousel-inner img {
+    width: 80%;
+    height: 66vh;
+  }
+            body{
+position:relative;
+}
+            #Maharaja{
+ padding-top:90px; color: #000000;
+}
+#Domestic{
+ padding-top:90px; color: #000000;
+}
+#Circuit{
+ padding-top:90px; color: #000000;
+}
+    #Rail{
+ padding-top:90px; color: #000000;
+}
+  </style>
+        <script>
+$(document).ready(function(){
+  $('[data-toggle="popover"]').popover();   
+});
+</script>
+        <script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+    </head>
+    <body data-spy="scroll" data-target="Train" data-offset="1">
+        <div class="container-fluid" >
+            <h2 ><p class="text-center" >Travel O' Fast</p></h2>
+            <br>
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Login</a></li>
+                <li class="breadcrumb-item"><a href="#">Booking</a></li>
+                <li class="breadcrumb-item"><a href="#">Train Reservation</a></li>
+                <li class="breadcrumb-item active">Tatkal</li>
+            </ul>
+            <div class="alert alert-warning alert-dismissible">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong>Train rescheduled</strong> Check <a href="#" class="alert-link">Train Booking</a> for more details.
+  </div>
+              <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+            <ul class="navbar-nav">
+                 <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-toggle="tooltip" title="Click here to login" data-placement="bottom">Login</a></li>
+                   <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">&nbsp;&nbsp;More&nbsp;<span class="badge badge-danger">1</span><span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Train Schedule</a></li>
+                            <li><a href="#">Train Timing</a></li>
+                            <li><a href="#">Track your Train</a></li>
+                            <li><a href="#">Train Booking&nbsp;<span class="badge badge-success">2</span></a></li>
+                            <li><a href="#">Platform</a></li>
+                        </ul>
+                    </li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="Train">&nbsp;&nbsp;Holiday Packages&nbsp;<span class="caret"></span></a> 
+<ul class="dropdown-menu" data-target="affix"> 
+<li class="nav-item"><a href="#Maharaja">Maharaja's Express</a></li> 
+<li class="nav-item"><a href="#Domestic" >Domestic Air Packages</a></li> 
+<li class="nav-item" ><a href="#Circuit">Buddhist Circuit</a></li> 
+<li class="nav-item"><a href="#Rail" >Rail Tour Packages</a></li> 
+</ul> 
+</li>
+                <li class="nav-item"><a class="nav-link" href="#"><button class="btn btn-info" data-toggle="modal" data-target="#firstmodal"><span data-toggle="tooltip" title="Click here to register" data-placement="right">Register</span></button></a></li>
+            </ul>  
+            <form class="form-inline ml-auto">
+                <input class="form-control" placeholder="search">
+                <button class="btn btn-primary">search</button>
+            </form>
+        </nav>
+<div class="row" >
+
+<div class="modal" id="firstmodal" role="dialog" >
+                    <div class="modal-dialog">
+                        <div class="modal-content" style="background-color: lightblue;">
+                <div class="modal-header">
+                    <h2 class="mx-auto">Register Here  
+                    </h2>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                <div class="modal-body">
+                    
+                    <table align="center">
+                        <tr>
+                            <td colspan="2">
+                                <div class="alert alert-success alert-dismissible">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong>Registered Successfully</strong> 
+  </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Name</td>
+                            <td><input type="text" name="name" value="Enter your Name"></td>
+                        </tr>
+                        <tr>
+                            <td>Username</td>
+                            <td><input type="text" name="username" value="Enter your Username"></td>
+                        </tr>
+                        <tr>
+                            <td>Date of Birth</td>
+                            <td><input type="date" name="date" value="Date of Birth"></td>
+                        </tr>
+                        <tr>
+                            <td>Password</td>
+                            <td><input type="text" name="pass" value="Enter Password"></td>
+                        </tr>
+                        <tr>
+                            <td>Confirm Password</td>
+                            <td><input type="text" name="pass" value="Re-Enter Password"></td>
+                        </tr>
+                    </table>
+                    </div>
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                    
+                    <button class="btn btn-primary" data-dismiss="modal">Submit</button>
+                </div>
+                        </div>
+    </div>
+            </div>
+</div>
+            <div id="demo" class="carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+    <li data-target="#demo" data-slide-to="3"></li>
+  </ul>
+  <div class="carousel-inner" align="center">
+    <div class="carousel-item active">
+      <img src="Maharaja.jpeg" alt="Maharaja" width="90%" height="10%">
+        <div class="carousel-caption">
+        <h3>Maharaja's Express</h3>
+      </div> 
+    </div>
+    <div class="carousel-item">
+      <img src="Vaishno.jpeg" alt="Domsetic " width="90%" height="10%">
+        <div class="carousel-caption">
+        <h3>Domestic Air Packages</h3>
+      </div> 
+    </div>
+    <div class="carousel-item">
+      <img src="buddhist-circuit.jpeg" alt="Buddhist Circuit Train" width="90%" height="10%">
+        <div class="carousel-caption">
+        <h3>Buddhist Circuit</h3>
+      </div> 
+    </div>
+      <div class="carousel-item">
+      <img src="Rail_Tour.jpeg" alt="Rail Tour" width="90%" height="10%">
+          <div class="carousel-caption">
+        <h3>Rail Tour Packages</h3>
+      </div> 
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+            <div class="row">
+            <div class="col-md">
+               <br><br> <table class="table table-border table-dark table-striped">
+                    <tr>
+                        <td colspan="3" align="center">Trains Between Stations
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>From:</td>
+                        <td></td>
+                        <td>To:</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="From"></td>
+                         <td align="center"><img src="image.jpg" class="rounded" height="30" width="30"></td>
+                        <td><input type="text" name="From"></td>
+                    </tr>
+                    <tr>
+                        <td>Date:</td>
+                        <td></td>
+                        <td><input type="date" name="date"></td>
+                    </tr>
+                    <tr>
+                        <td>Category</td>
+                        <td></td>
+                        <td>
+                            <select>
+                                <option value="General">General</option>
+                                <option value="Tatkal">Tatkal</option>
+                                <option value="Ladies">Ladies</option>
+                                <option value="Senior Citizen">Senior Citizen</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" colspan="3">
+                            <div class="progress" style="width:80%;height:30px">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:50%">50% Form Filled</div>
+  </div><br>
+                            <span  data-toggle="popover" title="Confirmation" data-placement="left" data-trigger="hover" data-content="Check the details before submitting"><input type="submit" name="submit" value="Submit"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span data-toggle="popover" title="Confirmation" data-placement="right" data-trigger="hover" data-content="Do you want to reset the data"><input type="reset" name="reset" value="Reset"></span></td>
+                    </tr>
+                </table>
+                
+                <br>
+                <table class="table table-border table-dark table-striped">
+                    <tr align="center">
+                        <th colspan="3">Get PNR Status</th>
+                    </tr>
+                    <tr align="center">
+                        <td>PNR number</td>
+                        <td></td>
+                         <td><input type="text" name="pnr" value="Enter your PNR Number "></td>
+                    </tr>
+                    <tr>
+                        <td align="center" colspan="3"><span  data-toggle="popover" title="Confirmation" data-placement="left" data-trigger="hover" data-content="Check the details before submitting"><input type="submit" name="submit" value="Submit"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span data-toggle="popover" title="Confirmation" data-placement="right" data-trigger="hover" data-content="Do you want to reset the data"><input type="reset" name="reset" value="Reset"></span></td>
+                    </tr>
+                </table>
+                <br>
+                <table class="table table-border table-dark table-striped">
+                    <tr align="center">
+                        <th colspan="3" >Arrival/ Departure at Station</th>
+                    </tr>
+                    <tr>
+                        <td>At station</td>
+                        <td></td>
+                        <td><input type="text" name="station"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="all" value="ALL">&nbsp;ALL&nbsp;&nbsp;&nbsp;<input type="radio" name="live" value="Live">&nbsp;Live</td>
+                        <td></td>
+                        <td align="center" colspan="2"><span  data-toggle="popover" title="Confirmation" data-placement="left" data-trigger="hover" data-content="Check the details before submitting"><input type="submit" name="submit" value="Submit"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span data-toggle="popover" title="Confirmation" data-placement="right" data-trigger="hover" data-content="Do you want to reset the data"><input type="reset" name="reset" value="Reset"></span></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md">
+                
+                <br><br><p align="center"><b>Holiday Packages</b></p>
+                <ul>
+                    <li id="Maharaja"><b><ins>Maharaja's Express</ins></b><br>
+                        Redefining Royalty, Luxury and Comfort, Maharajas' express takes you on a sojourn to the era of bygone stately splendour of princely states. Sylvan furnishings, elegant ambience and modern amenities are amalgamated for an “Experience Unsurpassed”. It has been a winner of “World’s Leading Luxury train” by World Travel Awards consecutively for last six years.<br><br>
+                    </li>
+                    <li id="Domestic"><b><ins>Domestic Air Packages</ins></b><br>
+                        Be it the spiritual devotee seeking blessings of Tirupati, Shirdi or Mata Vaishno Devi or the leisure traveller wanting to relish the Blue mountains of North East, Sand-dunes of Rajasthan, Hamlets of Ladakh, Wonders of Himalayas, Serene lakes or Picturesque Islands, IRCTC has it all. Discover India through IRCTC!<br><br>
+                    </li>
+                    <li id="Circuit"><b><ins>Buddhist Circuit Tourist Train</ins></b><br>
+                        India, the country where Buddhism originated has rich memories of the Buddhist legacy. As part of its drive towards austerity, the only kind of art &amp; architecture that it supported were Stupas, Chaityas &amp; Viharas. Buddhist Train India will help you visit all these places up close for a truly religious experience.<br><br>
+                    </li>
+                    <li id="Rail"><b><ins>Rail Tour Packages</ins></b><br>
+                        IRCTC offers Exclusive Rail tour packages with confirmed train tickets, sight-seeing and meals for enchanting Nilgiri Mountains, Darjeeling, Kullu Manali, Kashmir, Gangtok or divine tours of Mata Vaishno Devi, Rameswaram, Madurai, Shirdi, Tirupati etc. <br>
+                    </li>
+                </ul>
+            </div>
+        </div>
+             <div class="col-md">
+                 
+                 <ul class="pagination justify-content-center">
+                     <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                     <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                     <li class="page-item"><a class="page-link" href="#">2</a></li>
+                     <li class="page-item"><a class="page-link" href="#">3</a></li>
+                     <li class="page-item"><a class="page-link" href="#">4</a></li>
+                     <li class="page-item"><a class="page-link" href="#">5</a></li>
+                     <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                 </ul>
+             </div>
+            
+        </div>
+    </body>
+</html>
